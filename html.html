@@ -1,0 +1,267 @@
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="2.css">
+    <link rel="icon" href="favicon.ico"><!--FAVICON-->    
+    <style> 
+        header {
+            display: block;
+            width: 100%;
+            background: yellow;
+        }
+    </style>
+    <title>Reference</title> 
+</head>
+<body>
+    <header>
+        <nav>
+            
+        </nav>
+    </header>
+    <main>
+
+        <a id="sample_id" href="#"> Sample link</a>
+            <a class="sample_class" href="#"> Another sample link</a>
+            <h1>heading 1</h1>
+            <h2>heading 2</h2>
+            <h3>heading 3</h3>
+            <h4>heading 4</h4>
+            <h5>heading 5</h5>
+            <h6>heading 6</h6>
+
+        <!-- DIV ELEMENT <div></div> -->
+    <div>
+        <blockquote> Lorem. </blockquote>
+    </div>
+
+    <!-- SECTION ELEMENT <section></section> -->
+    <section>
+        <ul>
+            <li>Lorem.</li>
+            <li>Lorem.</li>
+        </ul>
+    </section>
+
+    <!-- SPAN ELEMENT <span></span> -->
+    <span>
+        Lorem.
+    </span>
+
+    <!-- ARTICLE ELEMENT<article></article> -->
+    <article>
+        <!-- PARAGRAPH ELEMENTS <p></p> -->
+        <p>Lorem.</p>
+        <b>Lorem.</b>
+        <i>Lorem.</i>
+        <em>Lorem.</em>
+        <strong>Lorem.</strong>
+        <small>Lorem.</small>
+        <italic>Lorem.</italic>
+        <q>Lorem.</q>
+        <cite>Lorem.</cite>
+        <blockquote>Lorem.</blockquote>
+        <abbr title="">Lorem.</abbr>
+        <sub>Lorem.</sub>
+        <sup>Lorem.</sup>
+        <dfn>Lorem.</dfn>
+        <ins>Lorem.</ins>
+        <del>Lorem.</del>
+        <s>Lorem.</s>
+
+        <!-- LINE BREAK ELEMENT <br> -->
+        <br>
+
+        <!-- HORIZONTAL LINE <hr> -->
+        <hr>
+
+        <!-- ANCHOR, LINK ELEMENT <a href=""></a> -->
+        <a href="#" target="_blank"></a>
+        <a href="mailto:jon@example.org">Email Jon</a> 
+    </article>
+    
+    <!-- UNORDERED LIST <ul></ul> -->
+    <ul>
+        <!-- LIST ITEMS <li></li> -->
+        <li>red</li>
+        <li>orange</li>
+        <li>blue</li>
+    </ul>
+
+    <!--ORDERED LIST -->
+    <ol>
+        <li>red</li>
+        <li>orange</li>
+        <li>blue</li>
+    </ol>
+
+    <!-- ORDERED LIST INSIDE UNORDERED LIST -->
+    <ul>
+        <li>red</li>
+        <li>orange
+            <ol>
+                <li>pale orange</li>
+                <li>medium orange</li>
+                <li>dark orange</li>
+                <dl>Lorem.</dl>
+                <dt>Lorem.</dt>
+                <dd>Lorem.</dd>
+            </ol>
+        </li>
+        <li>blue</li>
+    </ul>
+
+    <!-- IMAGE ELEMENTS <img src="" alt="">
+    3 rules for images: 
+    1)save images in right format; 
+    2)save images at right size; 
+    3)use correct resolution -->
+    <img src="123.jpg" alt="funny baby pic" width="200px" height="150px">
+    <figure></figure>
+    <figcaption> </figcaption>
+
+    <!-- AUDIO ELEMENT <audio src=""></audio> -->
+    <audio src="123.mp3" preload="" controls autoplay loop> </audio>
+    <audio>
+        <source src="" type="audio/mp3">
+        <source src="" type="audio/ogg">
+    </audio>
+
+    <!-- VIDEO ELEMENTS <video src=""></video> -->
+    <video src="https://youtu.be/hHW1oY26kxQ" controls autoplay loop width="" height=""> </video>
+
+    <video>
+        <source src="" type="video/mp4">
+        <source src="" type="video/webm">
+    </video>
+
+    <!-- MAP ELEMENT -->
+    <map name="https://goo.gl/maps/GvtdbiC4PKXTNSZ38">google maps</map>
+
+    <!-- IFRAMES <iframe src="" frameborder="0"></iframe> -->
+    <iframe src="" frameborder="0" width="" height=""></iframe>
+    <canvas></canvas>
+    <time></time>
+    <object data="" type=""></object>
+
+    <!-- TABLE ELEMENT -->
+    <table>
+    <!--CAPTION FOR TABLE-->
+    <caption>Sample table</caption>
+    <!-- TABLE HEAD -->
+        <thead >
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Evolves into</th>
+            </tr>
+        </thead>
+        <!-- TABLE BODY -->
+        <tbody>
+            <tr>
+                <td><img src="banner.jpg"></td>
+                <td > Lorem.</td>
+                <td > <a href="#">Lorem.</a> </td>
+                <td> Lorem.</td>
+            </tr>
+            <tr>
+                <td ><img src="banner.jpg"></td>
+                <td > Lorem.</td>
+                <td> Lorem.</td>
+                <td > <a href="#">Lorem.</a> </td>
+            </tr>
+            <tr>
+                <td ><img src="banner.jpg"></td>
+                <td > Lorem.</td>
+                <td > Lorem.</td>
+                <td > <a href="#">Lorem.</a> </td>
+            </tr>
+            <tr>
+                <td ><img src="banner.jpg"></td>
+                <td > Lorem.</td>
+                <td > Lorem.</td>
+                <td > <a href="#">Lorem.</a> </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- FORM ELEMENTS <form action=""></form>
+avoid using GET method, it will display input details, instead use POST method -->
+    <form class="fillout-form" action="#" method="POST">
+        <legend>Lorem.</legend>
+        <fieldset>
+            <label for=""> Birthdate: 
+            <input type="text" name="email" value="yourmail " placeholder="email" maxlength="" required> 
+            </label>
+            <input type="password" name="pwd" placeholder="password" min="5">
+            
+            <input type="date" name="date" id="" value="" placeholder="date of birth">
+            <input type="color" name="" id="" value="">
+                
+            <input type="range" name="" value="">
+            <input type="file" name="" id="" value="">
+            <input type="checkbox" name="" id="" value="">
+            
+            Male: <input type="radio" name="gender" value="Male" checked>
+            Female: <input type="radio" name="gender" value="Female">
+            Other: <input type="radio" name="gender" value="Other">
+        
+            Cars: 
+            <select name="cars" id="">
+                <option value="none">none</option>
+                <option value="car1">Ford</option>
+                <option value="car2">Nissan</option>
+                <option value="car3">Toyota</option>
+            </select>
+
+            <textarea name="message" placeholder="write a message!" cols="30" rows="10"> 
+                write a message!
+            </textarea>
+
+            <input type="reset" name="reset" id="" value="reset">
+            <input type="submit" name="submit" id="" value="submit">
+            
+            <button type="submit" name="submit">submit</button>
+            <button type="reset" name="reset">reset</button>
+        </fieldset>
+    </form>
+
+    <!-- SIDEBAR ELEMENT <aside></aside> -->
+    <aside>
+    </aside>
+
+    <!-- PUT JS AT THE END OF WEBPAGE TO LOAD IT 1ST -->
+    <script src="3.js" type="text/javascript"> </script>
+    <script >
+        var messageOne="hello world";
+        document.write(messageOne);
+    </script>
+    </main>
+
+     
+
+    <!-- footer section of document -->
+    <footer>
+        <!-- address section -->
+        <address>
+
+        </address>
+    </footer>
+
+</body>
+
+</html>
+
+<!-- VARIOUS SYMBOLS AND ICONS -->
+<!-- TELEPHONE-->
+<h1>&#9742</h1>  
+
+<!-- COPYRIGHT SYMBOL-->
+&copy or &#169 
+
+<!-- REGISTERED TRADEMARK-->
+&reg or &#174 
