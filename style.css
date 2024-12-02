@@ -1,0 +1,284 @@
+ 
+* {} /*universal selector*/
+body {} /*whole body selector*/
+h1, h2, p {} /*type selector*/
+.class {} /*class selector*/
+#id {} /*id selector*/
+li>a {} /*child selector*/
+p a {} /*descendant selector*/
+h1+p {} /*adjacent sibling selector*/
+h1~p {} /*general sibling selector*/
+
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0; 
+    box-sizing: inherit; 
+}
+
+
+:root { /* declaring variables */
+    --main-bg-color: brown;
+  }
+
+nav {
+    display: block;
+    width: 100%;
+    height: 5rem;
+    background: yellow;
+}
+
+
+
+element { /* using variables */
+    background-color: var(--main-bg-color);
+}
+
+
+header { /* display image in background, with gradient cover*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(../img/1.jpg);
+    background-size: cover;
+    background-position:center ;
+    height: 100vh;
+    width: 100%;
+}
+
+
+body, header, nav, aside, section { /*overall page layout, boxes & positions of elements */ /* column grid sizes: 940px, 460px, 300px, 220px, 140px */
+    /* form & shape of element*/
+    display: block; /* block element */
+
+    
+    display: inline-block;  /* inline-block element */
+    
+    overflow: scroll; /* create scrollable frame within page*/
+    overflow-x: hidden;
+
+    display: grid; /* grid element */
+    grid-template-columns: max-content;
+    grid-template-rows: repeat();
+    grid-gap: 1em;
+    grid-column-gap: 1em; 
+    grid-row-gap: 1em;
+    grid-row: 1/3;
+    grid-column: 1/5;
+    grid-area: ;
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-flow: dense;
+
+    display: flex; /* flex element */
+    flex-direction: row, column;
+    flex-wrap: wrap, nowrap, wrap-reverse;
+    flex-basis: <length>;
+    justify-content: flex-start, center, flex-end;
+    align-self: flex-end, flex-start, center;
+    align-content: flex start, flex-end, center;
+    flex-grow: 3;
+    flex-shrink: 5; 
+    flex: <integer>;
+    order: <integer>; 
+    align-items: baseline, center, flex-end, flex-start, middle;
+    flex-direction: row, row-reverse;
+    justify-content: space-between, space-around, space-evenly;
+    flex-flow: row wrap;
+    flex-basis: 300px;
+
+    display: none;  /* displays nothing in browser */
+
+    /* size of element, measurement units */
+    /* root font size by default is 16px, set root font-size: 62.5%. 62.5% of 16px is 10px, which makes 1rem=10px */
+    /* rem - defined by root element, if font size of root is 16px, then 1rem=16px */
+    /* em - equal to computed font-size of that element's parent, ex: if div is defined with font size: 16px then 1em=16px */
+    /* vh - 1/100 of screen height
+       vw - 1/100 of screen width
+       vmin
+       vmax
+        */
+    font-size: calc(1vw +0.6em);
+    width: 10px; /* pixels*/
+    height: 10vh; /*view height*/
+    height: calc(100vh - 100px); /*calculating */   
+    min-width: 10vw; /*view width*/
+    max-width: 10em; /*???*/
+    min-height: 10rem; /*root ???*/
+    max-height: 300px, 100vw;
+    grid-template-columns: repeat(4, 1fr, 2fr); /* fr - fractions */
+
+    
+    position: static, relative, absolute, fixed, sticky; /* layout & position of elements */
+    top: 70px, 70%;
+    right: 70px, 70%;
+    left: 70px, 70%;
+    bottom: 70px, 70%;
+    float: left, right, inherit, none;
+    z-index: 9999;
+    clear: both, left, right, none;
+    margin: 0 auto;
+
+    background-image: url("https://sampleImage.jpg"); /* backgound of element */
+    background-repeat: no-repeat, repeat, repeat-x, repeat-y, fixed, scroll;
+    background-position: center;
+    background-size: cover, contain;
+
+    background-color: black; /* backgound color of element */
+    background-color: rgb (256,123,212); opacity: 0.5;
+    background-color: #fff;
+    background-color: hsla(0, 50%, 60%, 0.5);
+
+    border: 1px, thin, medium, thick, dashed, dotted, solid, /* border of element */
+    ridge, double, groove, inset, outset, hidden/none, red; 
+    border-top: 10px ; 
+    border-right: 10px; 
+    border-left: 10px; 
+    border-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: inset -2px, -2px, -8px, #000;
+    visibility: hidden, visible;
+    overflow: hidden, scroll;
+    margin: 100px, 100%;
+    padding: 100px, 100%;
+}
+
+
+h1, h2, article, p /*text & fonts */
+p:first-letter 
+p:first-line {
+     
+    color: red; /*when picking colors of font & backgound, ensure contrasting */
+    color: rgba(); 
+    color:#000; 
+    color: hsla(); 
+
+    font-family: serif, 'sans-serif', helvetica; /* font styling */
+    font-size: 16px, 1rem, 1em, 150%;
+    font-weight: lighter, medium, bold, bolder;
+    font-weight: 100, 300, 600, 900;
+    font-style: normal, italic, oblique;
+    font-stretch: condensed, expanded; 
+
+    text-transform: uppercase, lowercase, capitalize;
+    text-decoration: none, underline, overline, line-through, blink;
+    text-indent: 20px;
+    text-shadow: 2px, 2px, 8px #000;
+    text-align: left, right, center, justify;
+
+    line-height: 16px, 1rem, 1em, 150%; 
+    letter-spacing: 16px, 1rem, 1em, 150%;
+    word-spacing: 16px, 1rem, 1em, 150%;
+    vertical-align: baseline, sub, top, middle, bottom;
+    
+}
+
+@font-face { /* font from external resources; formats: EOT, WOFF, TTF/OTF, SVG*/
+    font-family: GoogleFont;
+    src: url(fonts/GoogleFont);
+}
+h1, h1 {
+    font-family: serif, GoogleFont;
+}
+
+
+a:link  /* styling links */
+a:visited
+a:hover
+a:active
+a:focus {
+    color: deeppink;
+    text-decoration: none;
+}
+
+li, ul /* lists, tables, forms */
+li:first-child
+li:last-child
+li:nth-child(even, odd, 1)
+li {
+    list-style: none;
+    list-style-type: disc, circle, lower-roman; 
+    list-style-position: inside, outside;
+}
+
+table { /* table properties */
+    border-collapse: collapse, separate;
+}
+
+
+button /* buttons*/
+button:hover
+button:focus 
+button:active 
+ {
+    color: #1f1f1f ;
+    text-shadow: 2px, 2px, 4px, #000;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+/* media queries:PC- 1600x1200, notebook-1366x768, ipad-1024x768, smartphone-800x480,smartphone- 480x320 */
+@media only screen and (min-width: 300px) { }  /*very specific */
+@media all and (max-width: 600px ) { } /* for all devices*/
+@media print { } /*for print only*/
+@media (orientation: landscape) {} /*for lanscape only*/
+@media (orientation: portrait) and (max-width: 500px) {} /*for lanscape only with 500px width*/
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+p { /* overwriting other styles */
+    color: gray !important;
+} 
+
+button { /* animations & transformations */
+    transform: scale(1.2);
+    transform: rotateX();
+    transition: all 0.0s linear;
+    transition: all ease-in-out 100ms;
+    opacity: 0.1;
+}
+
+
+img { /* Pointer for object */
+    cursor: pointer;
+}
+
+input,
+input[type=email], /*selecting specific element*/
+input[type=text] {
+    outline: none /* turns off outline of input boxes*/
+}
+
+*:focus { /* selecting all form & input elements*/
+    outline: none /* turns off outline of input boxes*/   
+}
+
+/* float, clearfix & clear  */
+.clearfix {
+    clear: both; /*create clearfix class in element of html doc*/ 
+    content:"";
+    display: table; 
+}
+
+.clearfix:before,
+.clearfix:after {
+    clear: both; /*create clearfix class in element of html doc*/ 
+    content:"";
+    display: table; 
+}
+
+footer {
+    clear:both; 
+}
+col:nth-child(4n +5) {
+    clear: none;
+} 
+
+col:first-child {
+    clear: none;
+} 
+col:last-child{
+    clear: none;
+} 
